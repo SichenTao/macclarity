@@ -1,0 +1,8 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://macclarity.dev/schemas/diagnostic-snapshot-v1.schema.json",
+  "title":"MacClarity Diagnostic Snapshot v1","type":"object",
+  "required":["schemaVersion","producerVersion","runState","generatedAt","scope","performance","evidence","diagnoses","annotations"],
+  "properties":{"schemaVersion":{"const":1},"producerVersion":{"type":"string"},"runState":{"enum":["idle","preparing","collecting","reduced","paused","completed","cancelled","failed","discarded"]},"generatedAt":{"type":"string","format":"date-time"},"scope":{"type":"string"},"disk":{"type":["object","null"]},"performance":{"type":"array"},"evidence":{"type":"array"},"diagnoses":{"type":"array"},"annotations":{"type":"array"}},
+  "additionalProperties":false
+}

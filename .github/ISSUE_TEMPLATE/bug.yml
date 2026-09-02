@@ -1,0 +1,17 @@
+name: Reproducible bug
+description: Report a problem without private diagnostic data
+body:
+  - type: markdown
+    attributes: {value: "Never attach a local-full report. Use synthetic data or a reviewed share-redacted export."}
+  - type: input
+    id: version
+    attributes: {label: MacClarity version}
+    validations: {required: true}
+  - type: textarea
+    id: steps
+    attributes: {label: Reproduction steps}
+    validations: {required: true}
+  - type: textarea
+    id: expected
+    attributes: {label: Expected and observed result}
+    validations: {required: true}

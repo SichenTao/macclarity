@@ -1,0 +1,8 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/verify.sh

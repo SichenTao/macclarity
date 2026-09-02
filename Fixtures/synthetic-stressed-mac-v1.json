@@ -1,0 +1,27 @@
+{
+  "annotations": [],
+  "diagnoses": [
+    {"evidenceIDs":["disk-free"],"expectedBenefitBytes":12884901888,"id":"low-free-space","risk":"low","severity":"critical","summary":"可用空间低于安全线，建议先检查下载归档和可重建缓存。","title":"可用空间严重不足"},
+    {"evidenceIDs":["memory-pressure"],"id":"memory-pressure","risk":"low","severity":"attention","summary":"高内存压力与界面卡顿同时出现，建议检查高占用应用族。","title":"内存压力偏高"}
+  ],
+  "disk": {
+    "allocatedBytes":193273528320,"children":[
+      {"allocatedBytes":82678120448,"children":[{"allocatedBytes":34359738368,"children":[],"id":"research","isPartial":false,"logicalBytes":34359738368,"name":"Research Archive","path":"/Users/demo/Desktop/Research Archive"},{"allocatedBytes":17179869184,"children":[],"id":"recordings","isPartial":false,"logicalBytes":17179869184,"name":"Recordings","path":"/Users/demo/Desktop/Recordings"}],"id":"desktop","isPartial":false,"logicalBytes":82678120448,"name":"Desktop","path":"/Users/demo/Desktop"},
+      {"allocatedBytes":47244640256,"children":[{"allocatedBytes":15032385536,"children":[],"id":"cache","isPartial":false,"logicalBytes":15032385536,"name":"Caches","path":"/Users/demo/Library/Caches"}],"id":"library","isPartial":true,"logicalBytes":47244640256,"name":"Library","path":"/Users/demo/Library"},
+      {"allocatedBytes":32212254720,"children":[],"id":"advisory","isPartial":false,"logicalBytes":32212254720,"name":"Advisory Data","path":"/Users/demo/.advisory"},
+      {"allocatedBytes":31138512896,"children":[],"id":"documents","isPartial":false,"logicalBytes":31138512896,"name":"Documents","path":"/Users/demo/Documents"}
+    ],"id":"home","isPartial":true,"logicalBytes":193273528320,"name":"Demo Mac","path":"/Users/demo"
+  },
+  "evidence": [
+    {"id":"disk-free","metric":"disk.free","quality":"measured","source":"synthetic-volume","timestamp":"2026-09-02T00:00:00Z","unit":"GB","value":8.4},
+    {"id":"memory-pressure","metric":"memory.pressure","quality":"measured","source":"synthetic-host","timestamp":"2026-09-02T00:00:00Z","unit":"ratio","value":0.84}
+  ],
+  "generatedAt":"2026-09-02T00:00:00Z",
+  "performance":[
+    {"cpuPercent":28,"diskReadBytesPerSecond":12000000,"diskWriteBytesPerSecond":8000000,"memoryPressure":0.62,"swapBytes":5368709120,"timestamp":"2026-09-02T00:00:00Z"},
+    {"cpuPercent":54,"diskReadBytesPerSecond":42000000,"diskWriteBytesPerSecond":18000000,"memoryPressure":0.78,"swapBytes":5905580032,"timestamp":"2026-09-02T00:00:02Z"},
+    {"cpuPercent":82,"diskReadBytesPerSecond":62000000,"diskWriteBytesPerSecond":23000000,"memoryPressure":0.84,"swapBytes":6442450944,"timestamp":"2026-09-02T00:00:04Z"},
+    {"cpuPercent":43,"diskReadBytesPerSecond":18000000,"diskWriteBytesPerSecond":9000000,"memoryPressure":0.76,"swapBytes":6442450944,"timestamp":"2026-09-02T00:00:06Z"}
+  ],
+  "producerVersion":"0.1.0","runState":"completed","schemaVersion":1,"scope":"synthetic-demo"
+}

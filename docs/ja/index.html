@@ -1,0 +1,13 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="ローカル優先の Mac 容量・性能診断"><title>MacClarity — Mac を明快に</title><link rel="stylesheet" href="../site.css"></head><body><main>
+<nav><a class="brand" href="./">MacClarity</a><span><strong>日本語</strong><a href="../en/">英語</a><a href="../zh/">中国語</a></span></nav>
+<section class="hero"><p class="eyebrow">オープンソース · ローカル優先</p><h1>すべての容量を、明快に。<br>すべての判断を、確かに。</h1><p>容量の行方を見渡し、Mac が重くなる理由を理解して、根拠の見える提案から安心して判断できます。</p><div class="actions"><a class="button" href="#install">ソースから導入</a><a class="button secondary" href="https://github.com/SichenTao/macclarity">公開リポジトリを見る</a></div></section>
+<img class="hero-art" src="../assets/hero.svg" alt="色鮮やかなディスクフラワーと簡潔な性能推移図">
+<section id="choose"><div class="section-head"><p class="eyebrow">目的に合う表示から始める</p><h2>今、何を明らかにしたいですか？</h2></div><div class="features"><article><span class="number">01</span><h3>容量はどこへ消えた？</h3><p>空き容量が少ない、または「システムデータ」が大きく見えるとき。</p><b>おすすめ：ディスクフラワー</b></article><article><span class="number">02</span><h3>なぜ Mac が重い？</h3><p>処理負荷、メモリ圧力、スワップの短い推移を記録します。</p><b>おすすめ：性能推移</b></article><article><span class="number">03</span><h3>原因がまだ分からない？</h3><p>容量と動作状況を一緒に確認し、次に見るべき項目を絞ります。</p><b>おすすめ：総合診断</b></article></div></section>
+<section class="showcase"><div><p class="eyebrow">理解するためのデザイン</p><h2>美しい地図と、役に立つ答え。</h2><p>階層をたどって容量を調べ、未調査範囲も正直に表示し、提案と根拠を隣り合わせに示します。</p><ul><li>操作できるディレクトリフラワー</li><li>優先順に並ぶ大容量ファイルの提案</li><li>簡潔な性能推移</li><li>標準で読み取り専用の診断</li></ul></div><img src="../assets/diagnosis-flow.svg" alt="測定から処理後の確認までの六段階"></section>
+<section id="install" class="install"><p class="eyebrow">ソースプレビュー</p><h2>MacClarity を導入して試す</h2><p>macOS 14 以降、Xcode コマンドラインツール、Swift 6 が必要です。</p><pre><code>git clone https://github.com/SichenTao/macclarity.git
+cd macclarity
+./install.sh</code></pre><h3>最初は合成デモがおすすめです</h3><pre><code>swift run macclarity demo --output macclarity-demo.html
+open macclarity-demo.html</code></pre><h3>短い読み取り専用診断を実行</h3><pre><code>swift run macclarity diagnose --path "$HOME" --duration 30 --output report.html
+open report.html</code></pre><p class="note">Apple の署名と公証を通過した後に、直接ダウンロードできるアプリを提供します。現在はソースからビルドします。</p></section>
+<section class="trust"><div><p class="eyebrow">あなたの Mac、あなたの判断</p><h2>プライバシーを守り、処理前に明確に。</h2></div><p>診断はローカルで動作し、利用状況の送信はありません。共有レポートはローカル識別情報を隠せます。提案が操作を自動承認することもありません。</p></section>
+<footer><span>Apache-2.0 · 利用状況の送信なし · 合成デモデータ</span><a href="https://github.com/SichenTao/macclarity">ソースと利用文書</a></footer></main></body></html>
